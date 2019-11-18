@@ -1,32 +1,21 @@
-"use strict";
-
-let money,
-    time;
-    // = prompt("Ваш бюджет на месяц?", "")
-    // = prompt("Введите дату в формате YYYY-MM-DD", "")
+let money = prompt("Ваш бюджет на месяц?", ''),
+	time = prompt('Введите дату в формате YYYY-MM-DD', '');
 
 let appData = {
-  moneyData: money,
-  timeData: time,
-  expenses: {},
-  optionalExpenses: {},
-  income: [],
-  savings: false
+	budget: money,
+	expenses: {},
+	optionalExpenses: {},
+	income: [],
+	timeData: time,
+	savings: false
 };
 
-let costsOne = prompt("Введите обязательную статью расходов в этом месяце", ""),
-    sumOne = +prompt("Во сколько обойдется?", ""),
-    costsTwo = prompt("Введите обязательную статью расходов в этом месяце", ""),
-    sumTwo = +prompt("Во сколько обойдется?", "");
+let a1 = prompt("Введите обязательную статью расходов в этом месяце", ''),
+	a2 = prompt("Во сколько обойдется?", ''),
+	a3 = prompt("Введите обязательную статью расходов в этом месяце", ''),
+	a4 = prompt("Во сколько обойдется?", '');
 
-appData.expenses.costsOne = sumOne;
-appData.expenses.costsTwo = sumTwo;
+appData.expenses.a1 = a2;
+appData.expenses.a3 = a4;
 
-
-
-
-alert((appData.expenses.costsOne + appData.expenses.costsTwo) / 30);
-
-
-
-// console.log(costsOneSum + costsTwoSum);
+alert(appData.budget / 30);
