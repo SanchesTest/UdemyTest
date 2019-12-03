@@ -1,30 +1,3 @@
-'use strict';
-
-
-let money, time;
-
-function start() {
-	money = +prompt("Ваш бюджет на месяц?", "");
-	time = prompt("Введите дату в формате YYYY-MM-DD", "");
-
-	while (isNaN(money) || money == "" || money == null) {
-		money = +prompt("Ваш бюджет на месяц?", "");
-	}
-
-}
-start();
-
-
-let appData = {
-	budget: money,
-	timeData: time,
-	expenses: {},
-	optionalExpenses: {},
-	income: [],
-	savings: true
-};
-
-
 function chooseExpenses() {
 	for (let i = 0; i < 2; i++) {
 		let a = prompt("Введите обязательную статью расходов в этом месяце", ""),
